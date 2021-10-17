@@ -1,0 +1,20 @@
+<section fxLayout="row wrap" fxLayoutAlign="center center">
+    <mat-accordion fxFlex="500px" fxFlex.xs="100%">
+        <mat-expansion-panel *ngFor="let license of licenses; let i = index">
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              {{i+1}}. License
+            </mat-panel-title>
+            <mat-panel-description>
+              License Information
+            </mat-panel-description>
+          </mat-expansion-panel-header>
+      
+          <div fxLayout="row wrap" fxLayoutAlign="center center">
+            <div fxFlex="35%" class="text-color"><strong>type:</strong> &nbsp; {{license?.licenseType}}</div>
+            <div fxFlex class="text-color"><strong>created:</strong> &nbsp; {{license?.dateCreated | date}}</div>
+          </div>
+
+        </mat-expansion-panel>
+      </mat-accordion>
+</section>

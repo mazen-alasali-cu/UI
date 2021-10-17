@@ -1,0 +1,2 @@
+<app-user-data [user]='user' (selectEmitt)='showLicenses = $event'></app-user-data>
+<app-license-data *ngIf='showLicenses' [licenses]='user?.licenses'></app-license-data>
